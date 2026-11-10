@@ -11,12 +11,11 @@ def inicio(request):
     return render(request, "inicio.html",dados)
 
 def sobre(request):
-    return HttpResponse("<h1>Sobre mim</h1>"
-                        "<p>Meu nome é valescka e estou aprendendo Django.</p>")
+    return render(request, "sobre.html")
 
 def contato(request):
-    return HttpResponse(
-        "<h1>Contato</h1>"
-        "<p>E-mail: ana@email.com</p>"
-        "<a href='/'>Início</a> | "
-        "<a href='/sobre/'>Sobre</a>")
+    dados  = {
+            "email":"Valescka@email.com",
+            "tel":819999999,
+        }
+    return render(request, "contatos.html",dados)
