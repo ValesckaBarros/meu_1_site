@@ -19,3 +19,9 @@ def contato(request):
             "tel":819999999,
         }
     return render(request, "contatos.html",dados)
+
+def projetos(request):
+    projetos  = {
+            "projetos":["calculadora", "biblioteca", "meu site"],
+        }
+    return render(request, "projetos.html",projetos)
