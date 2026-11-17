@@ -2,10 +2,16 @@
 
 {% block conteudo %}
     <h1>Meus Projetos</h1>
+    TESTE
+
     <ul>
         {%for item in projetos%}
         <li class = "cartao">
-            <strong>{{item.titulo}}</strong>:{{item.descricao}}, {{item.ano}}
+            <strong>{{item.titulo}}</strong>:
+            {{item.descricao}}, 
+            <span class="tag">
+                {{.categoria}}
+            </span>
         </li>
         {%endfor%}
     </ul>

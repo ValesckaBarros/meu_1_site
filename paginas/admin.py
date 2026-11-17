@@ -1,6 +1,11 @@
 from django.contrib import admin
+from .models import Projetos, Categoria
 
-from .models import Livro
 
-admin.site.register(Livro)
+class ProjetoAdmin(admin.ModelAdmin):
+    list_display = ["titulo", "ano", "categoria"]
+
+
+admin.site.register(Projetos, ProjetoAdmin)
+admin.site.register(Categoria)
 
