@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Projetos
+
 
 def inicio(request):
     dados  = {
@@ -22,6 +24,6 @@ def contato(request):
 
 def projetos(request):
     projetos  = {
-            "projetos":["calculadora", "biblioteca", "meu site"],
+            "projetos": Projetos.objects.all(),
         }
     return render(request, "projetos.html",projetos)

@@ -4,7 +4,9 @@
     <h1>Meus Projetos</h1>
     <ul>
         {%for item in projetos%}
-        <li class = "cartao">{{item}}</li>
+        <li class = "cartao">
+            <strong>{{item.titulo}}</strong>:{{item.descricao}}, {{item.ano}}
+        </li>
         {%endfor%}
     </ul>
 {% endblock %}
