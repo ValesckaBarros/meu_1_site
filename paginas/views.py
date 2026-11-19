@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Projetos
+from .forms import ProjetoForm
+
 
 
 def inicio(request):
@@ -27,3 +29,14 @@ def projetos(request):
             "projetos": Projetos.objects.all(),
         }
     return render(request, "projetos.html",projetos)
+
+def novo_projeto(request):
+    if request.method == "POST":
+        form = ProjetoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("/projetos/")
+    else:
+        form = ProjetoForm()
+    return render(request, "novo_projeto.html",
+                  {"form": form})
