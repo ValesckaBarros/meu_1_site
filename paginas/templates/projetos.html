@@ -6,13 +6,11 @@
 
 
     <ul>
-        {%for item in projetos%}
+        {%for projeto in projetos%}
         <li class = "cartao">
-            <strong>{{item.titulo}}</strong>:
-            {{item.descricao}}, 
-            <span class="tag">
-                {{item.categoria}}
-            </span>
+            <a
+            href="/projetos/{{ projeto.id }}/">{{ projeto.titulo }}
+            </a>
         </li>
         {%endfor%}
     </ul>

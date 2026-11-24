@@ -25,5 +25,8 @@ urlpatterns = [
     path('contato/', views.contato),
     path('projetos/', views.projetos),
     path('projetos/novo/', views.novo_projeto),
+    path('projetos/<int:id>/', views.detalhe_projeto),
+    path('projetos/<int:id>/editar/', views.editar_projeto),
+    path('projetos/<int:id>/excluir/', views.excluir_projeto),
 
 ]

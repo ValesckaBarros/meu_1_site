@@ -5,7 +5,7 @@ nav a { color: #FFD43B; }
 footer { color: gray; margin-top: 10px; }
 .cartao {
         list-style: none;
-        background-color: white;
+        background-color: rgb(220, 235, 19);
         border: 1px solid #3fab72;
         border-radius: 8px;
         padding: 10px;
@@ -27,5 +27,17 @@ nav a:hover {background-color: orange;}
     padding: 2px 8px;
     border-radius: 10px;
 }
+
+
+
+.botao {
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: white;
+  background: #6b7a73;
+  text-decoration: none;
+}
+.botao-azul { background: #1a5fb4; }
+.botao-vermelho { background: #c01c28; }
 
 
