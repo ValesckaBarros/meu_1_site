@@ -19,7 +19,7 @@ def sobre(request):
 
 def contato(request):
     dados  = {
-            "email":"Valescka@email.com",
+            "email":"xxxxxxxxxxxxx",
             "tel":819999999,
         }
     return render(request, "contatos.html",dados)
